@@ -4,7 +4,8 @@ const GameSelector = () => {
   const [selectedGame, setSelectedGame] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
 
-  const games = ["cricket", "Football", "Hockey"];
+    const games = ["cricket", "Football", "Hockey"];
+    const times = ["weekday", "weekend"];
 
   const handleGameChange = (event) => {
     setSelectedGame(event.target.value);
@@ -30,25 +31,17 @@ const GameSelector = () => {
       ))}
 
       <h2>Select a Time:</h2>
-      <label>
-        <input
-          type="radio"
-          value="weekday"
-          checked={selectedTime === "weekday"}
-          onChange={handleTimeChange}
-        />
-        Weekday
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          value="weekend"
-          checked={selectedTime === "weekend"}
-          onChange={handleTimeChange}
-        />
-        Weekend
-      </label>
+      {times.map((items) => (
+        <label>
+          <input
+            type="radio"
+            value={items}
+            checked={selectedTime === items}
+            onChange={handleTimeChange}
+          />
+          Weekday
+        </label>
+      ))}
 
       {selectedGame && selectedTime && (
         <p>
