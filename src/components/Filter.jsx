@@ -13,7 +13,8 @@ const FilteredEmployees = () => {
   );
 
   return (
-    <div>
+      <div>
+          <p>Filter workinh here</p>
       {filteredEmployees.map((employee) => (
         <div key={employee.name}>
           <p>Name: {employee.name}</p>
