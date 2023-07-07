@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Home2 from './components/Country';
 import Filter from './components/Filter';
 import Reverse from './components/Reverse';
+import PromiseEx from './components/PromiseEx';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <hr/>
       <Filter />
       <hr />
-      <Reverse/>
+      <Reverse />
+      <hr />
+      <PromiseEx/>
     </div>
   );
 }
